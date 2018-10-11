@@ -6,9 +6,11 @@ class StringProperty:
         self.key = key
         self.field = field
 
+    def get_value(self, row):
+        return self.field.get_column_value(row)
+
     def extract_row(self, row):
-        row_value = self.field.get_column_value(row)
-        return {self.key: row_value}
+        return {self.key: self.get_value(row)}
 
     @staticmethod
     def test(key, value):
