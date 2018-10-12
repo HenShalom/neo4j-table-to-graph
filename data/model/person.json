@@ -1,0 +1,42 @@
+{
+  "vertices": [
+    {
+      "label": "Person",
+      "id": {
+        "fields": [
+          "Person",
+          "@person_ID"
+        ],
+        "delimiter": "~"
+      },
+      "properties": {
+        "FullName": "@name",
+        "FirstName": "@first",
+        "LastName": "@last",
+        "Email": "@email",
+        "PhoneNumber": "@phone"
+      },
+      "edges": [
+        {
+          "label": "identifies",
+          "id": [
+            {
+              "fields": [
+                "Person",
+                "@person_ID"
+              ],
+              "delimiter": "~"
+            },
+            "@person_ID",
+            "EDGE"
+          ],
+          "vertex": {
+            "label": "ID",
+            "id": "@person_ID",
+            "properties": {}
+          }
+        }
+      ]
+    }
+  ]
+}
