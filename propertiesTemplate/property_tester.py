@@ -11,6 +11,6 @@ def get_property(key, value):
                   EmptyProperty]
 
     for prop in properties:
-        p = prop.test(key, value, get_property)
+        p = prop.test(key, value)
         if p is not None:
             return p

@@ -1,3 +1,6 @@
+from propertiesTemplate.Fields.FieldTester import get_field
+
+
 class ArrayProperty:
     def __init__(self, key, fields):
         self.key = key
@@ -10,7 +13,7 @@ class ArrayProperty:
         return {self.key: self.get_value(row)}
 
     @staticmethod
-    def test(key, value, get_property):
+    def test(key, value):
         if type(value) == list:
-            return ArrayProperty(key, [get_property('', prop) for prop in value])
+            return ArrayProperty(key, [get_field(prop) for prop in value])
         return None

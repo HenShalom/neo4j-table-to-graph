@@ -1,4 +1,5 @@
 import constants
+from propertiesTemplate.Fields.FieldTester import get_field
 
 
 class ObjectProperty:
@@ -14,8 +15,8 @@ class ObjectProperty:
         return {self.key: self.get_value(row)}
 
     @staticmethod
-    def test(key, value, get_property):
+    def test(key, value):
         if type(value) == dict and 'fields' in value:
             delimiter = value['delimiter'] if 'delimiter' in value else constants.DEFAULT_DELIMITER
-            return ObjectProperty(key, delimiter, [get_property('', prop) for prop in value['fields']])
+            return ObjectProperty(key, delimiter, [get_field(prop) for prop in value['fields']])
         return None

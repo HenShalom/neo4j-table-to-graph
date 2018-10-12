@@ -9,5 +9,5 @@ class EmptyProperty:
         return {}
 
     @staticmethod
-    def test(key, value, get_property):
+    def test(key, value):
         return EmptyProperty(key)
