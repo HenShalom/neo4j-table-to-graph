@@ -1,4 +1,4 @@
-class EmprtyProperty:
+class EmptyProperty:
     def __init__(self, key):
         self.key = key
 

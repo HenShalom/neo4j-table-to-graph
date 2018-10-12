@@ -1,5 +1,5 @@
 import constants
-from property_tester import get_property
+from propertiesTemplate.property_tester import get_property
 
 
 class ObjectProperty:

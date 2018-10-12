@@ -1,4 +1,5 @@
-import BasicField, ConstField
+from propertiesTemplate.Fields.BasicField import BasicField
+from propertiesTemplate.Fields.ConstField import ConstField
 
 
 def get_field(value):

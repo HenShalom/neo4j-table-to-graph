@@ -1,7 +1,7 @@
-from property_tester import get_property
+from propertiesTemplate.property_tester import get_property
 
 
-class ObjectProperty:
+class ArrayProperty:
     def __init__(self, key, fields):
         self.key = key
         self.fields = fields
