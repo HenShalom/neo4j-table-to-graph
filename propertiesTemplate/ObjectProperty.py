@@ -8,7 +8,7 @@ class ObjectProperty:
         self.fields = fields
 
     def get_value(self, row):
-        return self.delimiter.join([field.get_column_value(row) for field in self.fields])
+        return self.delimiter.join([field.get_value(row) for field in self.fields])
 
     def extract_row(self, row):
         return {self.key: self.get_value(row)}

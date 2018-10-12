@@ -7,7 +7,7 @@ class StringProperty:
         self.field = field
 
     def get_value(self, row):
-        return self.field.get_column_value(row)
+        return self.field.get_value(row)
 
     def extract_row(self, row):
         return {self.key: self.get_value(row)}
