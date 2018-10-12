@@ -13,7 +13,7 @@ class StringProperty:
         return {self.key: self.get_value(row)}
 
     @staticmethod
-    def test(key, value):
+    def test(key, value, get_property):
         if type(value) == str:
             return StringProperty(key, get_field(value))
         return None
