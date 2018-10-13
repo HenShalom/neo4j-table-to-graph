@@ -11,7 +11,8 @@ class GraphItem:
 
     def write_csv_row(self, row, writer):
         row_dict = self.generate_row_dict(row)
-        writer(row_dict)
+        if len(row_dict):
+            writer(row_dict)
 
     def generate_row_dict(self, row):
         row_dict = dict()
