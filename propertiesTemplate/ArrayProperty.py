@@ -1,3 +1,4 @@
+import constants
 from propertiesTemplate.Fields.FieldTester import get_field
 
 
@@ -7,7 +8,7 @@ class ArrayProperty:
         self.fields = fields
 
     def get_value(self, row):
-        return [field.get_value(row) for field in self.fields]
+        return constants.DEFAULT_ARRAY_DELIMITER.join([field.get_value(row) for field in self.fields])
 
     def extract_row(self, row):
         return {self.key: self.get_value(row)}
