@@ -30,6 +30,8 @@
             "@person_ID",
             "EDGE"
           ],
+          "direction": "OUT",
+          "properties": {},
           "vertex": {
             "label": "ID",
             "id": "@person_ID",
