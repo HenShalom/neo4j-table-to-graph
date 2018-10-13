@@ -2,7 +2,7 @@ from propertiesTemplate.property_tester import get_property
 from modelLoader.graphItem import GraphItem
 
 
-class EDGE(GraphItem):
+class Edge(GraphItem):
     def __init__(self, edgeJSON):
         super().__init__(edgeJSON)
         self.properties = generate_edge_properties(edgeJSON)

@@ -1,5 +1,6 @@
 import os, json
 from modelLoader.vertex import Vertex
+from modelLoader.edge import Edge
 
 
 def data_loader(models_path):
@@ -20,6 +21,6 @@ def extract_data(model):
     for vertex in model['vertices']:
         vertices.append(Vertex(vertex))
         for edge in vertex['edges']:
-            # append edge when
+            edges.append(Edge(edge))
             vertices.append(Vertex(edge['vertex']))
     return edges, vertices
