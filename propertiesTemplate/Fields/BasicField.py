@@ -3,4 +3,4 @@ class BasicField:
         self.column = field[1:]
 
     def get_value(self, row):
-        return row[self.column]
+        return row[self.column].replace('\n', '').replace('\r', '')
