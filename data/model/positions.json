@@ -1,6 +1,86 @@
 {
   "vertices": [
     {
+      "label": "Position",
+      "id": {
+        "fields": [
+          "Position",
+          "@person_ID",
+          "@job_title",
+          "@position_type",
+          "@department_name"
+        ],
+        "delimiter": "~"
+      },
+      "properties": {
+        "title": "@job_title",
+        "type": "@position_type",
+        "DepartmentName": "@department_name"
+      },
+      "edges": [
+        {
+          "label": "In",
+          "id": [
+            {
+              "fields": [
+                "Position",
+                "@person_ID",
+                "@job_title",
+                "@position_type",
+                "@department_name"
+              ],
+              "delimiter": "~"
+            },
+            {
+              "fields": [
+                "Person",
+                "@person_ID"
+              ],
+              "delimiter": "~"
+            },
+            "EDGE"
+          ],
+          "direction": "OUT",
+          "properties": {},
+          "vertex": {
+            "label": "Person",
+            "id": {
+              "fields": [
+                "Person",
+                "@person_ID"
+              ],
+              "delimiter": "~"
+            },
+            "properties": {}
+          }
+        },
+        {
+          "label": "identifies",
+          "id": [
+            {
+              "fields": [
+                "Position",
+                "@person_ID",
+                "@job_title",
+                "@position_type",
+                "@department_name"
+              ],
+              "delimiter": "~"
+            },
+            "@department_name",
+            "EDGE"
+          ],
+          "direction": "OUT",
+          "properties": {},
+          "vertex": {
+            "label": "Person",
+            "id": "@department_name",
+            "properties": {}
+          }
+        }
+      ]
+    },
+    {
       "label": "Person",
       "id": {
         "fields": [
@@ -10,7 +90,7 @@
         "delimiter": "~"
       },
       "properties": {
-        "ID": "@person_ID",
+        "ID": "@person_ID"
       },
       "edges": [
         {
