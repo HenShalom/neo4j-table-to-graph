@@ -12,4 +12,4 @@ $> neo4j-admin.bat import --database "test.db"  \
   --relationships "output\edges_header.csv, output\edges.csv"
 ```
 
-for any other question suggestion or any other request feel free to send me a message.
+for any other question suggestion or any other request feel free to contact me.
