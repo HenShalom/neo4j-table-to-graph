@@ -24,5 +24,6 @@ def extract_data(model):
         vertices.append(Vertex(vertex))
         for edge in vertex['edges']:
             edges.append(Edge(edge))
-            vertices.append(Vertex(edge['vertex']))
+            if edge['label'] == "identifies":
+                vertices.append(Vertex(edge['vertex']))
     return edges, vertices
